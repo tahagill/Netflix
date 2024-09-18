@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url("assets/images/bg.jpg");
+  background-position: center center;
+  background-size: max(1200px, 100vw);
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  justify-content: center;
+}
+
+.box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  max-width: 60vw;
+  height: 62px;
+  margin: auto;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+.logo-cont {
+  width: 150px;
+  z-index: 10;
+  position: relative;
+  color: red;
+}
+.hero {
+  font-family: "Poppins", sans-serif;
+  height: calc(100% - 62px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 0 30px;
+}
+
+.hero > :nth-child(1) {
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: center;
+}
+.hero > :nth-child(2) {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+.hero > :nth-child(3) {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+.seperation {
+  height: 6px;
+  background-color: rgb(72, 71, 71);
+}
+.btn {
+  padding: 05px 10px;
+  font-weight: bolder;
+  background-color: white;
+  font-size: 15px;
+}
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.btn-red-sm {
+  background-color: red;
+  color: white;
+  padding: 05px 10px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.main input {
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.2);
+}
+
+.slider-wrapper {
+  max-width: 1500px;
+  margin: 50px auto;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(
+    132px * 10 + 20px * 10
+  ); /* Adjust width to account for margins between images */
+}
+
+.slide {
+  min-width: 220px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 10;
+  position: relative;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.slide:hover {
+  transform: scale(1.1); /* Scale the image to make it appear bigger */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Add shadow to give a "pop-out" effect */
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-header {
+  color: white;
+  margin-bottom: 30px;
+}
+.testimonial-heading {
+  color: white;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  gap: 30px;
+}
+.testimonial-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.testimonial-card-container h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.testimonial-card-container p {
+  font-size: 20px;
+  color: white;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background: linear-gradient(to right, #1a1a1a, #000033);
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card img {
+  order: 1; /* Move the image to the beginning */
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.accordion {
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #444;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #444;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    background-color: #222;
+    color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+.icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Adjust as necessary */
+}
+
+.accordion-item.active .icon {
+    content: "-";
+    transform: rotate(45deg);
+}
+.footer-input {
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.2);
+}
+.footer-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.footer-signup-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer-h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+/* Footer styling */
+.footer {
+  padding: 20px 50px;
+  background-color: #000;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+.footer-header {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-header a {
+  color: #757575;
+  text-decoration: none;
+}
+
+.footer-header a:hover {
+  text-decoration: underline;
+}
+
+/* Grid for footer links */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column a {
+  color: #757575;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Language button styling */
+.language-button {
+  background-color: transparent;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  color: #757575;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.language-button:hover {
+  border-color: #fff;
+}
+
+/* Netflix region display */
+.footer-country {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #757575;
+}
