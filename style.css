@@ -64,17 +64,17 @@ nav button {
 
 .hero > :nth-child(1) {
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 7vh; /* Use viewport units for responsive scaling */
   text-align: center;
 }
 .hero > :nth-child(2) {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 2vw; /* Viewport based */
   text-align: center;
 }
 .hero > :nth-child(3) {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.8vw; /* Viewport based */
   text-align: center;
 }
 
@@ -83,7 +83,7 @@ nav button {
   background-color: rgb(72, 71, 71);
 }
 .btn {
-  padding: 05px 10px;
+  padding: 5px 10px;
   font-weight: bolder;
   background-color: white;
   font-size: 15px;
@@ -98,7 +98,7 @@ nav button {
 .btn-red-sm {
   background-color: red;
   color: white;
-  padding: 05px 10px;
+  padding: 5px 10px;
   font-size: 15px;
   font-weight: bolder;
 }
@@ -125,9 +125,7 @@ nav button {
 .slider-container {
   display: flex;
   transition: transform 0.5s ease;
-  width: calc(
-    132px * 10 + 20px * 10
-  ); /* Adjust width to account for margins between images */
+  width: 100%; /* Full width to handle responsiveness */
 }
 
 .slide {
@@ -196,6 +194,7 @@ nav button {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
 }
 .testimonial-card-container h3 {
   font-size: 30px;
@@ -227,72 +226,72 @@ nav button {
 }
 
 .faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .faq-section h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .accordion {
-    background-color: #333;
-    border-radius: 4px;
-    overflow: hidden;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .accordion-item {
-    border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
 
 .accordion-button {
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .accordion-button:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .accordion-content {
-    padding: 0 15px;
-    background-color: #222;
-    color: #ccc;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+  padding: 0 15px;
+  background-color: #222;
+  color: #ccc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .accordion-content p {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 .icon {
-    font-size: 24px;
-    color: #fff;
+  font-size: 24px;
+  color: #fff;
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 200px; /* Adjust as necessary */
+  max-height: 200px; /* Adjust as necessary */
 }
 
 .accordion-item.active .icon {
-    content: "-";
-    transform: rotate(45deg);
+  content: "-";
+  transform: rotate(45deg);
 }
 .footer-input {
   padding: 3px 24px;
@@ -366,23 +365,180 @@ nav button {
   text-decoration: underline;
 }
 
-/* Language button styling */
-.language-button {
-  background-color: transparent;
-  border: 1px solid #444;
-  padding: 10px 20px;
-  color: #757575;
+.footer-column h3 {
+  color: white;
+}
+
+.footer-bottom {
+  color: #999;
   font-size: 14px;
-  cursor: pointer;
-}
-
-.language-button:hover {
-  border-color: #fff;
-}
-
-/* Netflix region display */
-.footer-country {
   margin-top: 20px;
-  font-size: 14px;
-  color: #757575;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  /* Hero section */
+  .hero > :nth-child(1) {
+    font-size: 7vw;
+  }
+
+  .hero > :nth-child(2) {
+    font-size: 3.5vw;
+  }
+
+  .hero > :nth-child(3) {
+    font-size: 3vw;
+  }
+  .slide-header {
+    font-size: 3.5vw;
+  }
+
+  /* Slider section */
+  .slide {
+    min-width: 50%; /* Adjust to show fewer images on smaller screens */
+  }
+
+  /* Testimonials section */
+  .testimonial-card-container {
+    flex-direction: column; /* Stack the cards vertically */
+  }
+  .testimonial-heading {
+    font-size: 3vw;
+  }
+  .testimonial-card-container > .card {
+    width: 100%;
+  }
+  .testimonial-card-container h3 {
+    font-size: 7vw;
+  }
+  .card {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 0 20px;
+  }
+
+  /* Footer adjustments */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Footer: collapse to 1 column on small screens */
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 60vw;
+  height: 62px;
+  margin: auto;
+}
+
+.logo-cont {
+  width: 150px;
+  z-index: 10;
+  position: relative;
+  color: red;
+}
+
+/* Make sure buttons remain clickable */
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile Nav Changes */
+@media screen and (max-width: 768px) {
+  /* Stack items vertically for smaller screens */
+  nav {
+    flex-direction: column;
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 10px;
+  }
+  .hero-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo-cont {
+    margin-bottom: 20px; /* Add space between logo and nav links */
+  }
+
+  nav button {
+    width: fit-content; /* Stretch buttons full width on small screens */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-signup-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    min-width: calc(
+      100% / 3 - 20px
+    ); /* Adjust for 3 slides per view with margins */
+  }
+
+  .slider-container {
+    display: flex;
+    width: auto; /* Adjust to handle responsive sliding */
+  }
+
+  .slide img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slide {
+    min-width: calc(
+      100% / 3 - 20px
+    ); /* Adjust for 3 slides per view with margins */
+  }
+}
+/* Existing CSS */
+.slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+/* Slider buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
