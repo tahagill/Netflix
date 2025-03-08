@@ -9,24 +9,31 @@
   <body>
     <div class="main">
       <nav class="nav">
-        <span class="logo-cont">
-          <img src="assets/images/logo.svg" />
-        </span>
-        <div class="right-nav">
-          <button class="btn">English</button>
-          <button class="btn-red-sm">Sign In</button>
+        <div class="nav-wrapper">
+          <span class="logo-cont">
+            <img src="assets/images/logo.svg" width="167" height="45" alt="Netflix" />
+          </span>
+          <div class="right-nav">
+            <div class="language-picker">
+              <select class="language-select">
+                <option>English</option>
+                <option>Urdu</option>
+              </select>
+            </div>
+            <button class="btn-red-sm">Sign In</button>
+          </div>
         </div>
       </nav>
       <div class="box"></div>
       <div class="hero">
-        <span> Unlimited movies, TV shows, and more </span>
-        <span> Starts at Rs 250. Cancel anytime. </span>
-        <span>
-          Ready to watch? Enter your email to create or restart your membership.
-        </span>
-        <div class="hero-signup">
-          <input type="text" placeholder="Email Address" />
-          <button class="btn-red">Get Started ></button>
+        <div class="hero-content">
+          <h1>Unlimited movies, TV shows, and more</h1>
+          <h2>Starts at Rs 250. Cancel anytime.</h2>
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+          <div class="email-form">
+            <input type="email" placeholder="Email address" />
+            <button class="btn-red">Get Started <span class="chevron">›</span></button>
+          </div>
         </div>
       </div>
       <div class="seperation"></div>
@@ -39,7 +46,7 @@
         <button class="prev" onclick="prevSlide()">&#10094;</button>
         <div class="slider-container">
           <div class="slide">
-            <img src="assets/images/test.jpg" alt="Image 1" />
+            <img src="assets/images/image01.webp" alt="Image 1" />
           </div>
           <div class="slide">
             <img src="assets/images/image02.webp" alt="Image 2" />
@@ -51,10 +58,10 @@
             <img src="assets/images/image04.webp" alt="Image 4" />
           </div>
           <div class="slide">
-            <img src="assets/images/test02.jpeg" alt="Image 5" />
+            <img src="assets/images/f1.webp" alt="Image 5" />
           </div>
           <div class="slide">
-            <img src="assets/images/image03.webp" alt="Image 6" />
+            <img src="assets/images/hande.webp" alt="Image 6" />
           </div>
           <div class="slide">
             <img src="assets/images/image07.webp" alt="Image 7" />
@@ -108,81 +115,54 @@
         </div>
       </div>
     </div>
-
     <section class="faq-section">
-        <h1>Frequently Asked Questions</h1>
-
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    What is Netflix?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Netflix is a streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    How much does Netflix cost?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from PKR 400 to PKR 1500 a month. No extra costs, no contracts.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    Why are you gay?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Bcs youre running hahahhahahah.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    whats ligma ?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>LIGMA BALLSSS HAHAHAHAH</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    What can I watch on Netflix?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-button">
-                    Is Netflix good for kids?
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies.</p>
-                </div>
-            </div>
+      <h1>Frequently Asked Questions</h1>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-button">
+            What is Netflix?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Netflix is a streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more.</p>
+          </div>
         </div>
+        <div class="accordion-item">
+          <button class="accordion-button">
+            How much does Netflix cost?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from PKR 400 to PKR 1500 a month. No extra costs, no contracts.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">
+            What can I watch on Netflix?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">
+            Is Netflix good for kids?
+            <span class="icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies.</p>
+          </div>
+        </div>
+      </div>
     </section>
     <div class="footer-signup">
       <div class="footer-h3">
-        <h3>
-          Ready to watch? Enter your email to create or restart your membership.
-        </h3>
+        <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
       </div>
       <div class="footer-signup-bottom">
         <input class="footer-input" type="email" placeholder="Email address" />
-        <button class="btn-red">Get Started ></button>
+        <button class="btn-red">Get Started <span class="chevron">›</span></button>
       </div>
     </div>
     <div class="footer">
@@ -213,13 +193,14 @@
             <a href="#">Contact Us</a>
           </div>
         </div>
+        <div class="footer-language">
+          <select class="language-select">
+            <option>🌐 English</option>
+            <option>🌐 Urdu</option>
+          </select>
+        </div>
+        <p class="footer-country">Netflix Pakistan</p>
       </div>
-      <div class="footer-language">
-        <button class="language-button">
-          <span>🌐 English</span>
-        </button>
-      </div>
-      <p class="footer-country">Netflix Pakistan</p>
     </div>
 
     <script src="script.js"></script>
